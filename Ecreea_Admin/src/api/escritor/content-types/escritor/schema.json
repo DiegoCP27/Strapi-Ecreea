@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "escritors",
+  "info": {
+    "singularName": "escritor",
+    "pluralName": "escritors",
+    "displayName": "Escritor",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fotoPerfil": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    },
+    "apellido": {
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    },
+    "area": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::area.area"
+    }
+  }
+}
